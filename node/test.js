@@ -1,7 +1,7 @@
 const { processContacts } = require('./vcf');
 
-let contacts = []
-async function main() {
+let contacts = [];
+(async () => {
     contacts = await processContacts();
     console.log('inside', contacts)
-}
+})();
