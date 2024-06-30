@@ -29,38 +29,38 @@ let contacts = [];
     contacts = await processContacts();
 
     // Wait for the span element and ensure it is clickable
-    await page.waitForSelector('span._akav', { visible: true });
-    await page.evaluate(() => {
-        const linkWithNumber = document.querySelector('span._akav');
-        linkWithNumber.click();
-    });
+    // await page.waitForSelector('span._akav', { visible: true });
+    // await page.evaluate(() => {
+    //     const linkWithNumber = document.querySelector('span._akav');
+    //     linkWithNumber.click();
+    // });
 
-    const inputSelector = '.selectable-text.x1n2onr6.xy9n6vp.x1n327nk.xh8yej3.x972fbf.xcfux6l.x1qhh985.xm0m39n.xjbqb8w.x1uvtmcs.x1jchvi3.xss6m8b.xexx8yu.x4uap5.x18d9i69.xkhd6sd';
-    await page.waitForSelector(inputSelector, { visible: true });
-    await page.focus(inputSelector);
+    // const inputSelector = '.selectable-text.x1n2onr6.xy9n6vp.x1n327nk.xh8yej3.x972fbf.xcfux6l.x1qhh985.xm0m39n.xjbqb8w.x1uvtmcs.x1jchvi3.xss6m8b.xexx8yu.x4uap5.x18d9i69.xkhd6sd';
+    // await page.waitForSelector(inputSelector, { visible: true });
+    // await page.focus(inputSelector);
 
-    // Select all text and delete it
-    await page.keyboard.down('Control');
-    await page.keyboard.press('A');
-    await page.keyboard.up('Control');
-    await page.keyboard.press('Backspace');
+    // // Select all text and delete it
+    // await page.keyboard.down('Control');
+    // await page.keyboard.press('A');
+    // await page.keyboard.up('Control');
+    // await page.keyboard.press('Backspace');
 
-    // Type the new phone number
-    await page.keyboard.type('+62 895703051945');
+    // // Type the new phone number
+    // await page.keyboard.type('+62 895703051945');
 
-    // Wait for the login button and click it
-    await page.waitForSelector('.x889kno.x1a8lsjc.xbbxn1n.xxbr6pl.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1z11no5.xjy5m1g.x1mnwbp6.x4pb5v6.x178xt8z.xm81vs4.xso031l.xy80clv.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x1v8p93f.xogb00i.x16stqrj.x1ftr3km.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.xbtce8p.x14v0smp.xo8ufso.xcjl5na.x1k3x3db.xuxw1ft.xv52azi', { visible: true });
-    await page.evaluate(() => {
-        const loginByNumberButton = document.querySelector('.x889kno.x1a8lsjc.xbbxn1n.xxbr6pl.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1z11no5.xjy5m1g.x1mnwbp6.x4pb5v6.x178xt8z.xm81vs4.xso031l.xy80clv.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x1v8p93f.xogb00i.x16stqrj.x1ftr3km.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.xbtce8p.x14v0smp.xo8ufso.xcjl5na.x1k3x3db.xuxw1ft.xv52azi');
-        loginByNumberButton.click();
-    });
+    // // Wait for the login button and click it
+    // await page.waitForSelector('.x889kno.x1a8lsjc.xbbxn1n.xxbr6pl.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1z11no5.xjy5m1g.x1mnwbp6.x4pb5v6.x178xt8z.xm81vs4.xso031l.xy80clv.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x1v8p93f.xogb00i.x16stqrj.x1ftr3km.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.xbtce8p.x14v0smp.xo8ufso.xcjl5na.x1k3x3db.xuxw1ft.xv52azi', { visible: true });
+    // await page.evaluate(() => {
+    //     const loginByNumberButton = document.querySelector('.x889kno.x1a8lsjc.xbbxn1n.xxbr6pl.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1z11no5.xjy5m1g.x1mnwbp6.x4pb5v6.x178xt8z.xm81vs4.xso031l.xy80clv.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x1v8p93f.xogb00i.x16stqrj.x1ftr3km.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.xbtce8p.x14v0smp.xo8ufso.xcjl5na.x1k3x3db.xuxw1ft.xv52azi');
+    //     loginByNumberButton.click();
+    // });
 
     // Wait for the login id and print it
-    await page.waitForSelector('.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.light', { visible: true, timeout: 120000 });
-    await page.evaluate(() => {
-        const idElements = document.querySelectorAll('.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.light');
-        console.log(idElements)
-    });
+    // await page.waitForSelector('.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.light', { visible: true, timeout: 120000 });
+    // await page.evaluate(() => {
+    //     const idElements = document.querySelectorAll('.x1c4vz4f.xs83m0k.xdl72j9.x1g77sc7.x78zum5.xozqiw3.x1oa3qoh.x12fk4p8.xeuugli.x2lwn1j.xl56j7k.x1q0g3np.x6s0dn4.light');
+    //     console.log(idElements)
+    // });
 
     await page.waitForSelector('._ai0b._ai08', { visible: true, timeout: 120000 });
     await page.click("._ai0b._ai08");
