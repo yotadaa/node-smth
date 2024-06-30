@@ -2,6 +2,8 @@ const puppeteer = require('puppeteer');
 
 const groupName = "Kaldu Basi";
 
+const { processContacts } = require('./vcf');
+
 // _9vcv _advm -> join group button id
 // search button = _ai0b._ai08
 // search field = selectable-text.copyable-text.x15bjb6t.x1n2onr6
@@ -17,10 +19,7 @@ const targetCheckbox = ".x10l6tqk.x8zc4e7.x11uqc5h.x78zum5.x6s0dn4.x5yr21d.x47co
 const confirmMember = ".x10l6tqk.x1a87ojn.x3h4tne.xg01cxk.x1f85oc2" // wait for this and click
 const extraConfirm = ".x889kno.x1a8lsjc.xbbxn1n.xxbr6pl.x1n2onr6.x1rg5ohu.xk50ysn.x1f6kntn.xyesn5m.x1z11no5.xjy5m1g.x1mnwbp6.x4pb5v6.x178xt8z.xm81vs4.xso031l.xy80clv.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x1v8p93f.xogb00i.x16stqrj.x1ftr3km.x1hl8ikr.xfagghw.x9dyr19.x9lcvmn.xbtce8p.x14v0smp.xo8ufso.xcjl5na.x1k3x3db.xuxw1ft.xv52azi"; // wait and click
 const timeout = 120000;
-const contacts = [
-    "6281276972525",
-    "62895339975091"
-];
+const contacts = processContacts();
 
 (async () => {
     const browser = await puppeteer.launch({ headless: false }); // Set headless to false to see the browser actions

@@ -16,15 +16,19 @@ async function readVCF(filePath) {
 
 // Function to extract phone numbers from the parsed contacts
 function extractPhoneNumbers(contacts) {
-    return contacts.tel.map(o => o.value)
+    return contacts.tel.map(o => o.value);
 }
 
 // Example usage
 const filePath = './test_1_70 (1).vcf';
 
-readVCF(filePath).then(contacts => {
-    const phoneNumbers = extractPhoneNumbers(contacts);
-    console.log("Extracted Phone Numbers:", phoneNumbers);
-}).catch(error => {
-    console.error("Error:", error);
-});
+function processContacts() {
+    readVCF(filePath).then(contacts => {
+        const phoneNumbers = extractPhoneNumbers(contacts);
+        console.log(phoneNumbers);
+    }).catch(error => {
+        console.error("Error:", error);
+    });
+}
+
+module.exports = { processContacts };
